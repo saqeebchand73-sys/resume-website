@@ -1,0 +1,264 @@
+/* ============================================
+   Saqeeb Chand - Resume website styles
+   Palette: warm cream background, deep teal,
+   terracotta accent, charcoal text
+   ============================================ */
+
+/* --- Element selectors --- */
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;  /* inherited by all text */
+  background-color: #FFF7EF;
+  color: #2B2B2B;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #0E5A52;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #D9633B;
+  text-decoration: none;
+}
+
+/* pseudo selector: link hover */
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+}
+
+th, td {
+  border: 1px solid #E3D5C5;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background-color: #0E5A52;
+  color: #FFFFFF;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* alternating row tint for readability */
+tr:nth-child(even) {
+  background-color: #F7E9DC;
+}
+
+/* --- ID selectors --- */
+
+#hero {
+  background-color: #0E5A52;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#hero h1 {
+  color: #FFFFFF;
+  margin: 16px 0 8px;
+}
+
+#contact {
+  text-align: center;
+}
+
+/* --- Class selectors --- */
+
+/* centered page container (box model: margin auto) */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* sticky nav bar using position + flexbox */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #FFF7EF;
+  border-bottom: 1px solid #E3D5C5;
+  z-index: 10;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  color: #0E5A52;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* combining selectors: links inside the nav list */
+.nav-links li a {
+  color: #2B2B2B;
+  font-size: 15px;
+}
+
+.nav-links li a:hover {
+  color: #D9633B;
+  text-decoration: none;
+}
+
+/* round profile photo */
+.avatar {
+  object-fit: cover;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #D9633B;
+  color: #FFFFFF;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #FFFFFF;
+}
+
+.tagline {
+  font-size: 18px;
+  margin: 0 0 24px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #D9633B;
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #B84E2C;
+  text-decoration: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+}
+
+.btn-outline:hover {
+  background-color: #FFFFFF;
+  color: #0E5A52;
+}
+
+/* card grid using CSS grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #E3D5C5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.org {
+  font-weight: 600;
+  color: #D9633B;
+  margin-top: 0;
+}
+
+.tools {
+  font-size: 14px;
+  color: #5F6B6B;
+}
+
+.plain-list li {
+  margin-bottom: 10px;
+}
+
+/* footer */
+footer {
+  background-color: #0E5A52;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 16px 20px;
+  margin-top: 20px;
+}
+
+/* --- Responsive: single column on small screens --- */
+
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+}
